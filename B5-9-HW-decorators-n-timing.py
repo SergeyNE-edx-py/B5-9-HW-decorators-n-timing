@@ -62,8 +62,9 @@ def f():
         pass
 
 if __name__ == "__main__":
-    print(f.__name__)
     f()
+    print(f.__name__)
+
     i = 10000
-    print(fibo.__name__, i)
-    fibo(i)
+    len_of_10000th_fibo = len(str(fibo(i)))
+    print(fibo.__name__, i, len_of_10000th_fibo)

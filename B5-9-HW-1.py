@@ -40,7 +40,6 @@ class Timer():
             return func_res   
         return wrapper
 
-# @time_this(50)
 def fibo(imax):
     '''
     вычисляет imax-й член ряда Фибоначчи
@@ -56,7 +55,6 @@ def fibo(imax):
         i += 1 
     return fi3
 
-# @time_this(30)
 def f():
     '''
     dummy func: for in range(1000000)
@@ -71,6 +69,6 @@ if __name__ == "__main__":
 
     fibo = Timer(10).time_this(fibo)
     i = 10000
-    s = fibo(i)
-    print(fibo.__name__, i)
-    print(s)
+    len_of_10000th_fibo = len(str(fibo(i)))
+    print(fibo.__name__, i, len_of_10000th_fibo)
+
